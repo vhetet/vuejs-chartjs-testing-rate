@@ -6,7 +6,7 @@
 
 <script>
 import LineChart from './LineChart.js'
-import data from '../assets/illinois_covid_test_daily_positive_rate.json'
+import data from '../assets/new-york_covid_test_daily_positive_rate.json'
 
   export default {
     components: {
