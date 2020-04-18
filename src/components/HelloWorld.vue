@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <line-chart :chart-data="datacollection"></line-chart>
+    <line-chart :chart-data="datacollection" :options="options"></line-chart>
   </div>
 </template>
 
@@ -15,6 +15,7 @@ import data from '../assets/illinois_covid_test_daily_positive_rate.json'
     data () {
       return {
         datacollection: {},
+        options: {},
         data: data
       }
     },
@@ -24,19 +25,38 @@ import data from '../assets/illinois_covid_test_daily_positive_rate.json'
     methods: {
       fillData () {
         this.datacollection = {
-          labels: data.slice(8).map(x => x.date),
+          labels: data.slice(12).map(x => x.date),
           datasets: [
             {
               label: 'Illinois covid testing daily positive rate',
-              backgroundColor: '#f87979',
-              data: data.slice(8).map(x => x.dailyPositiveCasePercentage)
+              yAxisID: 'a',
+              borderColor: 'rgba(255, 111, 111)',
+              backgroundColor: 'rgba(255, 111, 111, 0.3)',
+              data: data.slice(12).map(x => x.dailyPositiveCasePercentage)
             },
             {
               label: 'Number of test / 100',
-              backgroundColor: 'green',
-              data: data.slice(8).map(x => x.dailyTest / 100)
+              yAxisID: 'b',
+              borderColor: 'rgba(100, 111, 255)',
+              backgroundColor: 'rgba(100, 111, 255, 0.3)',
+              data: data.slice(12).map(x => x.dailyTest)
             }
           ]
+        },
+        this.options = {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+              id: 'a',
+              type: 'linear',
+              position: 'left',
+            }, {
+              id: 'b',
+              type: 'linear',
+              position: 'right'
+            }]
+          }
         }
       }
     }
