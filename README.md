@@ -12,7 +12,7 @@
 * update the legend of the chart
 * clean project and remove any unused dependency
 * enable es6 for the scripts so that I can replace the require by imports
-* deploy that somewhere
+* deploy that somewhere ==> heroku
 * create a batch job to update the data daily
 
 ## Project setup

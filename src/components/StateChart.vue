@@ -1,6 +1,7 @@
 <template>
 
   <div class="hello">
+    <p>After reading <a href="https://www.theatlantic.com/technology/archive/2020/04/us-coronavirus-outbreak-out-control-test-positivity-rate/610132/">this article</a> in the Atlantic about the the covid test positivity rate was important I looked for gravphs that show the evolution about that rate but could not find it. THere might be I just did not saw it. But <a href="https://covidtracking.com/data/state/illinois#historical">covidtracking.com</a> has this data so I made a graphs out of it</p>
     <select v-model="stateSelected" @change="getData(stateSelected)">
       <option v-for="state in stateList" :key="state">{{state}}</option>
     </select>
@@ -42,7 +43,9 @@ import LineChart from './LineChart.js'
               yAxisID: 'a',
               borderColor: 'rgba(255, 111, 111)',
               backgroundColor: 'rgba(255, 111, 111, 0.3)',
-              data: this.stateData.slice(12).map(x => x.dailyPositiveCasePercentage)
+              data: this.stateData.slice(12).map(x => x.dailyPositiveCasePercentage),
+              min: 0,
+              max: 100
             },
             {
               label: 'Number of test',
@@ -61,6 +64,10 @@ import LineChart from './LineChart.js'
               id: 'a',
               type: 'linear',
               position: 'left',
+              ticks: {
+                max: 100,
+                min: 0
+              }
             }, {
               id: 'b',
               type: 'linear',
