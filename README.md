@@ -12,7 +12,6 @@
 * update the legend of the chart
 * clean project and remove any unused dependency
 * enable es6 for the scripts so that I can replace the require by imports
-* deploy that somewhere ==> heroku
 * create a batch job to update the data daily
 
 ## Project setup
@@ -49,6 +48,6 @@ The vue.js + chart.js app use this data to render the graphs
 
 Notes: There is an API but it does not provide the data I wanted as far as I know. So Ideally I will find a way to use that instead of scraping the site but for now that's my solution.
 
+## deploy to heroku
 
-
-
+follow [those steps](https://cli.vuejs.org/guide/deployment.html#heroku)

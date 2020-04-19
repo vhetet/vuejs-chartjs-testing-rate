@@ -43,15 +43,13 @@ import LineChart from './LineChart.js'
               yAxisID: 'a',
               borderColor: 'rgba(255, 111, 111)',
               backgroundColor: 'rgba(255, 111, 111, 0.3)',
-              data: this.stateData.slice(12).map(x => x.dailyPositiveCasePercentage),
-              min: 0,
-              max: 100
+              data: this.stateData.slice(12).map(x => x.dailyPositiveCasePercentage)
             },
             {
               label: 'Number of test',
               yAxisID: 'b',
               borderColor: 'rgba(100, 111, 255)',
-              backgroundColor: 'rgba(100, 111, 255, 0.3)',
+              backgroundColor: 'rgba(100, 111, 255, 0)',
               data: this.stateData.slice(12).map(x => x.dailyTest)
             }
           ]
@@ -71,7 +69,10 @@ import LineChart from './LineChart.js'
             }, {
               id: 'b',
               type: 'linear',
-              position: 'right'
+              position: 'right',
+              ticks: {
+                min: 0
+              }
             }]
           }
         }
