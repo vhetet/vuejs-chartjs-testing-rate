@@ -38,7 +38,7 @@ import LineChart from './LineChart.js'
           labels: this.stateData.slice(12).map(x => x.date),
           datasets: [
             {
-              label: 'Illinois covid testing daily positive rate',
+              label: 'daily positive rate (in %)',
               yAxisID: 'a',
               borderColor: 'rgba(255, 111, 111)',
               backgroundColor: 'rgba(255, 111, 111, 0.3)',

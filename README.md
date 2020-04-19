@@ -1,4 +1,4 @@
-# covid-testing-rate-graph
+# vue-chartjs-testing-rate-graph
 
 ## TODO
 
