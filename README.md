@@ -34,3 +34,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 * improve the chart?
 * update the legend of the chart
 * clean project and remove any unused dependency
+* enable es6 for the scripts?
