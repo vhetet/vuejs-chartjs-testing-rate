@@ -1,7 +1,7 @@
 <template>
 
   <div class="hello">
-    <p>After reading <a href="https://www.theatlantic.com/technology/archive/2020/04/us-coronavirus-outbreak-out-control-test-positivity-rate/610132/">this article</a> in the Atlantic about the the covid test positivity rate was important I looked for gravphs that show the evolution about that rate but could not find it. THere might be I just did not saw it. But <a href="https://covidtracking.com/data/state/illinois#historical">covidtracking.com</a> has this data so I made a graphs out of it</p>
+    <p>After reading <a href="https://www.theatlantic.com/technology/archive/2020/04/us-coronavirus-outbreak-out-control-test-positivity-rate/610132/">this article</a> in the Atlantic explaining why the positivity rate was a useful data I looked for graphs that showed it's evolution but could not find it. There might be I just did not saw it. But <a href="https://covidtracking.com/data/state/illinois#historical">covidtracking.com</a> has this data so I made a graphs out of it</p>
     <select v-model="stateSelected" @change="getData(stateSelected)">
       <option v-for="state in stateList" :key="state">{{state}}</option>
     </select>
@@ -59,7 +59,7 @@ import LineChart from './LineChart.js'
           maintainAspectRatio: false,
           scales: {
             yAxes: [{
-              id: 'a',
+            id: 'a',
               type: 'linear',
               position: 'left',
               ticks: {

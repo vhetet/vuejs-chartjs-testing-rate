@@ -49,6 +49,4 @@ fetchData = (state) => {
     });
 }
 
-// fetchData("")    
-
 module.exports = fetchData;
