@@ -3,13 +3,16 @@
 ## TODO
 
 * add details in the readme
-* check I can use the API instead of scraping the site ==> afaik it does not provide the entire historic data
 * create a dashboard? 
 * clean the data?
 * improve the chart?
 * clean project and remove any unused dependency
 * enable es6 for the scripts so that I can replace the require by imports
 * create a batch job to update the data daily
+* optimize storage of the json files. Make sure it's not loading all of them imn the first place. And check the bundle size
+* Hide the data that isn't usable
+* improve the contry/state selection selection
+* do more charts?
 
 ## Project setup
 ```
