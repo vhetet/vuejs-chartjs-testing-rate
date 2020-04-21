@@ -10,8 +10,8 @@ fs.createReadStream('src/assets/data/owid-covid-data.csv')
         if(data[row[1]]) {
             data[row[1]].push({
                 dailyTest: row[12],
-                newDailyCase: row[8],
-                dailyPositiveCasePercentage: (row[8]/row[12]) * 100,
+                newDailyCase: row[4],
+                dailyPositiveCasePercentage: (row[4]/row[12]) * 100,
                 date: row[2]
             })
         } else {
@@ -21,10 +21,10 @@ fs.createReadStream('src/assets/data/owid-covid-data.csv')
     .on('end', rowCount => {
         console.log(`Parsed ${rowCount} rows`)
         console.log(Object.keys(data))
-        fs.writeFileSync(`src/assets/data/country_list.json`, JSON.stringify(Object.keys(data)))
+        // fs.writeFileSync(`src/assets/data/country_list.json`, JSON.stringify(Object.keys(data)))
 
-        // Object.keys(data).map(x => {
-        //     fs.writeFileSync(`src/assets/data/${x}_covid_test_daily_positive_rate.json`, JSON.stringify(data[x]))
-        // })
+        Object.keys(data).map(x => {
+            fs.writeFileSync(`src/assets/data/${x}_covid_test_daily_positive_rate.json`, JSON.stringify(data[x]))
+        })
 
     });
