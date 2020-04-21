@@ -18,7 +18,7 @@ fetchUsTotalData = () => {
                 dailyTest: x.totalTestResultsIncrease,
                 newDailyCase: x.positiveIncrease,
                 dailyPositiveCasePercentage: (x.positiveIncrease / x.totalTestResultsIncrease) * 100,
-                date: moment(20200420, 'YYYYMMDD').format('ddd MMM M Y')
+                date: moment(x.date, 'YYYYMMDD').format('ddd MMM D Y')
             }
         })
         data = data.reverse();
