@@ -22,7 +22,7 @@ import LineChart from './LineChart.js'
       return {
         datacollection: {},
         options: {},
-        stateSelected: 'new-york',
+        stateSelected: 'us',
         stateData: [],
         stateList: require('../assets/data/state_list.json')
       }
