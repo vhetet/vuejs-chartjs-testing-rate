@@ -13,6 +13,8 @@
 * Hide the data that isn't usable
 * improve the contry/state selection selection
 * do more charts?
+* add tests!!! (the focus was to build something but if I expand this project I will unit test it)
+* investigate the other api available to see if I can find better data
 
 ## Project setup
 ```

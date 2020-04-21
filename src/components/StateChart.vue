@@ -2,7 +2,7 @@
 
   <div class="hello">
     <p>After reading <a href="https://www.theatlantic.com/technology/archive/2020/04/us-coronavirus-outbreak-out-control-test-positivity-rate/610132/">this article</a> in the Atlantic 
-      explaining why the positivity rate was a useful data. I looked for graphs that showed it's evolution but could not find any. There might be some, I just did not saw it. 
+      explaining why the positivity rate was a useful data. I looked for graphs that showed it's evolution but could not find any. There might be some, I just did not see it. 
       But <a href="https://covidtracking.com/data/state/illinois#historical">covidtracking.com</a> has this data so I made a graphs out of it</p>
     <select v-model="stateSelected" @change="getData(stateSelected)">
       <option v-for="state in stateList" :key="state">{{state}}</option>
