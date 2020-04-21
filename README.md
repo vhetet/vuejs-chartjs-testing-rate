@@ -4,12 +4,9 @@
 
 * add details in the readme
 * check I can use the API instead of scraping the site ==> afaik it does not provide the entire historic data
-* Automate the fetching for all the states ==> 
 * create a dashboard? 
-* add a way to select a state?
 * clean the data?
 * improve the chart?
-* update the legend of the chart
 * clean project and remove any unused dependency
 * enable es6 for the scripts so that I can replace the require by imports
 * create a batch job to update the data daily
