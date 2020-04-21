@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <StateChart msg="Welcome to Your Vue.js App"/>
+    <PositivityRateChart msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import StateChart from './components/StateChart.vue'
+import PositivityRateChart from './components/PositivityRateChart.vue'
 
 export default {
   name: 'App',
   components: {
-    StateChart
+    PositivityRateChart
   }
 }
 </script>
