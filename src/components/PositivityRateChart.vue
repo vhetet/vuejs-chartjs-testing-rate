@@ -22,9 +22,9 @@ import LineChart from './LineChart.js'
       return {
         datacollection: {},
         options: {},
-        stateSelected: 'us',
+        stateSelected: 'us/us',
         stateData: [],
-        stateList: require('../assets/data/us/state_list.json')
+        stateList: require('../assets/data/state_list.json')
       }
     },
     mounted () {
@@ -33,8 +33,7 @@ import LineChart from './LineChart.js'
     },
     methods: {
       getData(state) {
-        console.log(state)
-        this.stateData = require(`../assets/data/us/${state}_covid_test_daily_positive_rate.json`)
+        this.stateData = require(`../assets/data/${state}_covid_test_daily_positive_rate.json`)
         this.fillData()
       },
       fillData () {

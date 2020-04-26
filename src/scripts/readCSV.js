@@ -3,7 +3,7 @@ const csv = require('@fast-csv/parse');
 
 data = {}
 
-fs.createReadStream('src/assets/data/owid-covid-data.csv')
+fs.createReadStream('src/assets/data/world_data.csv')
     .pipe(csv.parse())
     .on('error', error => console.error(error))
     .on('data', row => {
