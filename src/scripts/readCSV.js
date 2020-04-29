@@ -3,7 +3,7 @@ const csv = require('@fast-csv/parse');
 
 data = {}
 
-fs.createReadStream('src/assets/data/owid-covid-data.csv')
+fs.createReadStream('src/assets/data/world_data.csv')
     .pipe(csv.parse())
     .on('error', error => console.error(error))
     .on('data', row => {
@@ -19,12 +19,10 @@ fs.createReadStream('src/assets/data/owid-covid-data.csv')
         }
     })
     .on('end', rowCount => {
-        console.log(`Parsed ${rowCount} rows`)
-        console.log(Object.keys(data))
         // fs.writeFileSync(`src/assets/data/country_list.json`, JSON.stringify(Object.keys(data)))
 
         Object.keys(data).map(x => {
-            fs.writeFileSync(`src/assets/data/${x}_covid_test_daily_positive_rate.json`, JSON.stringify(data[x]))
+            fs.writeFileSync(`src/assets/data/countries/${x}_covid_test_daily_positive_rate.json`, JSON.stringify(data[x]))
         })
 
     });

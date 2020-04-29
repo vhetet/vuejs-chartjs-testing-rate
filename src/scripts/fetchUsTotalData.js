@@ -1,4 +1,3 @@
-const cheerio = require("cheerio");
 const request = require('request');
 const fs = require('fs');
 const moment = require('moment')
@@ -23,7 +22,7 @@ fetchUsTotalData = () => {
         })
         data = data.reverse();
     
-        fs.writeFileSync(`src/assets/data/us_covid_test_daily_positive_rate.json`, JSON.stringify(data))
+        fs.writeFileSync(`src/assets/data/us/us_covid_test_daily_positive_rate.json`, JSON.stringify(data))
     });
 }
 
