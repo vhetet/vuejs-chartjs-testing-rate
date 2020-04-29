@@ -13,6 +13,7 @@
 
 <script>
 import LineChart from './LineChart.js'
+import axios from 'axios'
 
   export default {
     components: {
@@ -33,7 +34,9 @@ import LineChart from './LineChart.js'
     },
     methods: {
       getData(state) {
-        this.stateData = require(`../assets/data/${state}_covid_test_daily_positive_rate.json`)
+        axios.get(`https://raw.githubusercontent.com/vhetet/vuejs-testing-rate-data/master/data/${state}_covid_test_daily_positive_rate.json`).then(res => {
+          this.stateData = res.data
+          })
         this.fillData()
       },
       fillData () {
