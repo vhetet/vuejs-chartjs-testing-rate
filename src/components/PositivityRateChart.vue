@@ -11,8 +11,14 @@
         href="https://covidtracking.com/data/state/illinois#historical"
       >covidtracking.com</a> has this data so I made a graphs out of it
     </p>
-    <select v-model="stateSelected" @change="getData(stateSelected)">
-      <option v-for="state in stateList" :key="state">{{state}}</option>
+    
+    <select v-model="worldSelected">
+      <option value="us">US states</option>
+      <option value="countries">World</option>
+    </select>
+    <select v-model="stateSelected" @change="getData(stateSelected)">  
+      <template v-if="worldSelected === 'us'"><option v-for="state in stateList.filter(x => x.includes('us/')).map(x => x.slice(3))" :key="state">{{state}}</option></template>
+      <template v-if="worldSelected === 'countries'"><option v-for="state in stateList.filter(x => x.includes('countries/')).map(x => x.slice(10))" :key="state">{{state}}</option></template>
     </select>
     <line-chart :chart-data="datacollection" :options="options"></line-chart>
   </div>
@@ -30,7 +36,8 @@ export default {
     return {
       datacollection: {},
       options: {},
-      stateSelected: "us/us",
+      stateSelected: "us",
+      worldSelected: "us",
       stateData: [],
       stateList: require("../assets/data/state_list.json")
     };
@@ -43,7 +50,7 @@ export default {
     getData(state) {
       axios
         .get(
-          `https://raw.githubusercontent.com/vhetet/vuejs-testing-rate-data/master/data/${state}_covid_test_daily_positive_rate.json`
+          `https://raw.githubusercontent.com/vhetet/vuejs-testing-rate-data/master/data/${this.worldSelected}/${state}_covid_test_daily_positive_rate.json`
         )
         .then(res => {
           console.log(
