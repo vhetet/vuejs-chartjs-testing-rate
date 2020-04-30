@@ -11,14 +11,16 @@
         href="https://covidtracking.com/data/state/illinois#historical"
       >covidtracking.com</a> has this data so I made a graphs out of it
     </p>
-    
+
     <select v-model="worldSelected">
       <option value="us">US states</option>
       <option value="countries">World</option>
     </select>
-    <select v-model="stateSelected" @change="getData(stateSelected)">  
-      <template v-if="worldSelected === 'us'"><option v-for="state in stateList.filter(x => x.includes('us/')).map(x => x.slice(3))" :key="state">{{state}}</option></template>
-      <template v-if="worldSelected === 'countries'"><option v-for="state in stateList.filter(x => x.includes('countries/')).map(x => x.slice(10))" :key="state">{{state}}</option></template>
+    <select v-model="stateSelected" @change="getData()">
+      <option
+          v-for="state in stateList.filter(x => x.includes(`${worldSelected}/`)).map(x => x.slice(x.indexOf('/') + 1))"
+          :key="state"
+        >{{state}}</option>
     </select>
     <line-chart :chart-data="datacollection" :options="options"></line-chart>
   </div>
@@ -42,20 +44,20 @@ export default {
       stateList: require("../assets/data/state_list.json")
     };
   },
+  computed: {
+      dataPath() { return `${this.worldSelected}/${this.stateSelected}`}
+  },
   mounted() {
     this.getData(this.stateSelected);
     this.stateList = this.stateList.sort();
   },
   methods: {
-    getData(state) {
+    getData() {
       axios
         .get(
-          `https://raw.githubusercontent.com/vhetet/vuejs-testing-rate-data/master/data/${this.worldSelected}/${state}_covid_test_daily_positive_rate.json`
+          `https://raw.githubusercontent.com/vhetet/vuejs-testing-rate-data/master/data/${this.dataPath}_covid_test_daily_positive_rate.json`
         )
         .then(res => {
-          console.log(
-            res.data.slice(res.data.length - 2, res.data.length - 1)[0]
-          );
           this.stateData = res.data;
           this.fillData();
         });
