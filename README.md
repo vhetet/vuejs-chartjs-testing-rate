@@ -42,13 +42,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Run the data fetching script
 
-I order to get the data there is a scraping script. It get the data from covidtacking.com and get the positive testing rate for all american state and territories. This script can be run daily to get new datas but ideally I would use the API to just add the new data instead of refetching the all the historic data. 
-
-To fetch the data run `node src/scripts/fetchDataForAllStates.js` in the home directory. It will fetch the data and store in in json files in `src/assets/data`
-
-The vue.js + chart.js app use this data to render the graphs
-
-Notes: There is an API but it does not provide the data I wanted as far as I know. So Ideally I will find a way to use that instead of scraping the site but for now that's my solution.
+The data is stored on this [repo](https://github.com/vhetet/vuejs-testing-rate-data) that udpdates it daily. Not all countries/states report their cases so some charts are empty or are missing some data points.
 
 ## deploy to heroku
 

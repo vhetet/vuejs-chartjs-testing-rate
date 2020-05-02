@@ -6,11 +6,17 @@
         href="https://www.theatlantic.com/technology/archive/2020/04/us-coronavirus-outbreak-out-control-test-positivity-rate/610132/"
       >this article</a> in the Atlantic
       explaining why the positivity rate was a useful data. I looked for graphs that showed it's evolution but could not find any. There might be some, I just did not see it.
-      But
+      I used
+    </p>
+    <p>
       <a
         href="https://covidtracking.com/data/state/illinois#historical"
-      >covidtracking.com</a> has this data so I made a graphs out of it
+      >covidtracking.com</a> for the US states data and
+      <a href="https://covid.ourworldindata.org/data">ourworldindata.org</a> for the countries data. To see how the data is teched checkout
+      <a href="https://github.com/vhetet/vuejs-testing-rate-data">this repo</a>.
     </p>
+    <p>Not all countries/states report their cases so some charts are empty or are missing some data points.</p>
+      
 
     <select v-model="worldSelected">
       <option value="us">US states</option>
@@ -18,9 +24,9 @@
     </select>
     <select v-model="stateSelected" @change="getData()">
       <option
-          v-for="state in stateList.filter(x => x.includes(`${worldSelected}/`)).map(x => x.slice(x.indexOf('/') + 1))"
-          :key="state"
-        >{{state}}</option>
+        v-for="state in stateList.filter(x => x.includes(`${worldSelected}/`)).map(x => x.slice(x.indexOf('/') + 1))"
+        :key="state"
+      >{{state}}</option>
     </select>
     <line-chart :chart-data="datacollection" :options="options"></line-chart>
   </div>
@@ -45,7 +51,9 @@ export default {
     };
   },
   computed: {
-      dataPath() { return `${this.worldSelected}/${this.stateSelected}`}
+    dataPath() {
+      return `${this.worldSelected}/${this.stateSelected}`;
+    }
   },
   mounted() {
     this.getData(this.stateSelected);
@@ -114,6 +122,8 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+select {
+  margin: 1em;
+}
 </style>
