@@ -15,7 +15,8 @@
       <a
         href="https://github.com/vhetet/vuejs-testing-rate-data"
       >repo</a>.
-      If you want to look at the code for the web app check this <a href="https://github.com/vhetet/vuejs-chartjs-testing-rate">repo</a>
+      If you want to look at the code for the web app check this
+      <a href="https://github.com/vhetet/vuejs-chartjs-testing-rate">repo</a>
     </p>
 
     <select v-model="worldSelected">
@@ -66,29 +67,36 @@ export default {
           `https://raw.githubusercontent.com/vhetet/vuejs-testing-rate-data/master/data/${this.dataPath}_covid_test_daily_positive_rate.json`
         )
         .then(res => {
-          this.stateData = res.data;
+          this.stateData = res.data.slice(
+            res.data.findIndex(x => x.dailyTest > 10)
+          );
           this.fillData();
         });
     },
     fillData() {
       (this.datacollection = {
-        labels: this.stateData.slice(12).map(x => x.date),
+        labels: this.stateData.map(x => x.date),
         datasets: [
           {
             label: "daily positive rate (in %)",
             yAxisID: "a",
             borderColor: "rgba(255, 111, 111)",
             backgroundColor: "rgba(255, 111, 111, 0.3)",
-            data: this.stateData
-              .slice(12)
-              .map(x => x.dailyPositiveCasePercentage)
+            data: this.stateData.map(x => x.dailyPositiveCasePercentage)
           },
           {
             label: "Number of test",
             yAxisID: "b",
             borderColor: "rgba(100, 111, 255)",
             backgroundColor: "rgba(100, 111, 255, 0)",
-            data: this.stateData.slice(12).map(x => x.dailyTest)
+            data: this.stateData.map(x => x.dailyTest)
+          },
+          {
+            label: "Number of case",
+            yAxisID: "b",
+            borderColor: "rgba(63, 191, 63)",
+            backgroundColor: "rgba(63, 191, 63, 0)",
+            data: this.stateData.map(x => x.newDailyCase)
           }
         ]
       }),
