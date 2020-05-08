@@ -1,5 +1,7 @@
 # vue-chartjs-testing-rate-graph
 
+The app is currently deployed [here](https://vue-chartjs-experimentation.herokuapp.com/)
+
 ## TODO
 
 * add details in the readme
