@@ -68,7 +68,7 @@ export default {
         )
         .then(res => {
           this.stateData = res.data.slice(
-            res.data.findIndex(x => x.dailyTest > 10)
+            res.data.findIndex(x => x.dailyTest > 10   )
           );
           this.fillData();
         });
@@ -133,5 +133,8 @@ export default {
 <style scoped>
 select {
   margin: 1em;
+}
+p {
+  font-size: 15px;
 }
 </style>
