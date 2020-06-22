@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <PositivityRateChart msg="Welcome to Your Vue.js App"/>
+    <PositivityRateChart/>
   </div>
 </template>
 

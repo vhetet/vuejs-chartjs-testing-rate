@@ -29,6 +29,7 @@
         :key="state"
       >{{state}}</option>
     </select>
+    <p v-if="datacollection.datasets[2].data">Number of cases: {{datacollection.datasets[2].data.reduce((a, b) => Number(a) + (Number(b)))}}</p>
     <line-chart :chart-data="datacollection" :options="options"></line-chart>
   </div>
 </template>
