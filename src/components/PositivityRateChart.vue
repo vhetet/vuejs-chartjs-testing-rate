@@ -68,8 +68,9 @@ export default {
           `https://raw.githubusercontent.com/vhetet/vuejs-testing-rate-data/master/data/${this.dataPath}_covid_test_daily_positive_rate.json`
         )
         .then(res => {
+          
           this.stateData = res.data.slice(
-            res.data.findIndex(x => x.dailyTest > 10   )
+            res.data.findIndex(x => x.newDailyCase > 10   )
           );
           this.fillData();
         });
