@@ -3,16 +3,17 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export const store = new Vuex.store({
+export default new Vuex.Store({
     state: {
-        count: 0
+        // count: 0,
+        title: 'test'
     },
     mutations: {
-        change(state, count) {
-            state.count = count
-        }
+        // change(state, count) {
+        //     state.count = count
+        // }
     },
     getters: {
-        count: state => state.count
+        // count: state => state.count
     }
 })
