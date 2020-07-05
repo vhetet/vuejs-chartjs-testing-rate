@@ -1,6 +1,7 @@
 <template>
     <div class="hello">
-      <h1>{{ title }}</h1>
+      <h1>{{ title }} {{ count }}</h1>
+      <button @click="$store.commit('change', 5)">change count</button>
         <p>
             After reading
             <a
@@ -46,7 +47,6 @@
 <script>
 import LineChart from "./LineChart.js";
 import axios from "axios";
-import { mapState } from "vuex";
 
 export default {
     components: {
@@ -66,7 +66,12 @@ export default {
         dataPath() {
             return `${this.worldSelected}/${this.stateSelected}`;
         },
-        ...mapState(["title"])
+        title() {
+            return this.$store.state.title
+        },
+        count() {
+            return this.$store.state.count
+        }
     },
     mounted() {
         this.getData(this.stateSelected);
