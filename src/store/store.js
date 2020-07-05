@@ -6,11 +6,15 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         count: 0,
-        title: 'test'
+        title: 'test',
+        chartData: []
     },
     mutations: {
         change(state, count) {
             state.count = count
+        },
+        changeChartData(state, chartData) {
+            state.chartData = chartData
         }
     },
     getters: {

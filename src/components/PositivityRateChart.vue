@@ -1,7 +1,5 @@
 <template>
     <div class="hello">
-      <h1>{{ title }} {{ count }}</h1>
-      <button @click="$store.commit('change', 5)">change count</button>
         <p>
             After reading
             <a
@@ -71,6 +69,9 @@ export default {
         },
         count() {
             return this.$store.state.count
+        },
+        chartData() {
+            return this.$store.state.chartData
         }
     },
     mounted() {
@@ -87,6 +88,7 @@ export default {
                     this.stateData = res.data.slice(
                         res.data.findIndex(x => x.newDailyCase > 10)
                     );
+                    this.$store.commit('changeChartData', this.stateData);
                     this.fillData();
                 });
         },
