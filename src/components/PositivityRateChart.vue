@@ -63,12 +63,6 @@ export default {
         dataPath() {
             return `${this.worldSelected}/${this.stateSelected}`;
         },
-        title() {
-            return this.$store.state.title
-        },
-        count() {
-            return this.$store.state.count
-        },
         chartData() {
             return this.$store.state.chartData
         }
