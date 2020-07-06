@@ -29,7 +29,7 @@
         :key="state"
       >{{state}}</option>
     </select>
-    <p v-if="datacollection.datasets[2].data">Number of cases: {{datacollection.datasets[2].data.reduce((a, b) => Number(a) + (Number(b)))}}</p>
+    <p v-if="datacollection.datasets[2].data">Number of cases: {{ totalCases | formatNumber }}</p>
     <line-chart :chart-data="datacollection" :options="options"></line-chart>
   </div>
 </template>
@@ -37,6 +37,7 @@
 <script>
 import LineChart from "./LineChart.js";
 import axios from "axios";
+import numeral from "numeral";
 
 export default {
   components: {
@@ -55,6 +56,9 @@ export default {
   computed: {
     dataPath() {
       return `${this.worldSelected}/${this.stateSelected}`;
+    },
+    totalCases() {
+        return this.datacollection.datasets[2].data.reduce((a, b) => Number(a) + (Number(b)));
     }
   },
   mounted() {
@@ -128,6 +132,12 @@ export default {
           }
         });
     }
+  },
+  filters: {
+      formatNumber: function (value) {
+          if (!value) return ''
+          return numeral(value).format("0,0")
+      }
   }
 };
 </script>
