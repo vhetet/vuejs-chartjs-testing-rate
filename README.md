@@ -16,7 +16,9 @@ The app is currently deployed [here](https://vue-chartjs-experimentation.herokua
 * improve the contry/state selection selection
 * do more charts?
 * add tests!!! (the focus was to build something but if I expand this project I will unit test it)
-* investigate the other api available to see if I can find better data
+* ~~investigate the other api available to see if I can find better data~~ ==> the data from `our world in data` is good
+* add the incidence rate (using this [json](https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json))
+* use vuex to manage data and store the different search. Use the store data to render a table with the data from the contry looked up. The table should be sortable (I could use buefy for that)
 
 ## Project setup
 ```
