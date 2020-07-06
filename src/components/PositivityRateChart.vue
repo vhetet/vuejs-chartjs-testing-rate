@@ -56,7 +56,6 @@ export default {
             options: {},
             stateSelected: "us",
             worldSelected: "us",
-            stateData: [],
             stateList: require("../assets/data/state_list.json")
         };
     },
@@ -85,23 +84,23 @@ export default {
                     `https://raw.githubusercontent.com/vhetet/vuejs-testing-rate-data/master/data/${this.dataPath}_covid_test_daily_positive_rate.json`
                 )
                 .then(res => {
-                    this.stateData = res.data.slice(
+                    const data = res.data.slice(
                         res.data.findIndex(x => x.newDailyCase > 10)
                     );
-                    this.$store.commit('changeChartData', this.stateData);
+                    this.$store.commit('changeChartData', data);
                     this.fillData();
                 });
         },
         fillData() {
             (this.datacollection = {
-                labels: this.stateData.map(x => x.date),
+                labels: this.$store.state.chartData.map(x => x.date),
                 datasets: [
                     {
                         label: "daily positive rate (in %)",
                         yAxisID: "a",
                         borderColor: "rgba(255, 111, 111)",
                         backgroundColor: "rgba(255, 111, 111, 0.3)",
-                        data: this.stateData.map(
+                        data: this.$store.state.chartData.map(
                             x => x.dailyPositiveCasePercentage
                         )
                     },
@@ -110,14 +109,14 @@ export default {
                         yAxisID: "b",
                         borderColor: "rgba(100, 111, 255)",
                         backgroundColor: "rgba(100, 111, 255, 0)",
-                        data: this.stateData.map(x => x.dailyTest)
+                        data: this.$store.state.chartData.map(x => x.dailyTest)
                     },
                     {
                         label: "Number of case",
                         yAxisID: "b",
                         borderColor: "rgba(63, 191, 63)",
                         backgroundColor: "rgba(63, 191, 63, 0)",
-                        data: this.stateData.map(x => x.newDailyCase)
+                        data: this.$store.state.chartData.map(x => x.newDailyCase)
                     }
                 ]
             }),
