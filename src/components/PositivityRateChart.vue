@@ -31,11 +31,17 @@
         </select>
         <select v-model="stateSelected" @change="getData()">
             <option
-                v-for="state in stateList.filter(x => x.includes(`${worldSelected}/`)).map(x => x.slice(x.indexOf('/') + 1))"
+                v-for="state in regionsName.filter(x => x.includes(`${worldSelected}/`)).map(x => x.slice(x.indexOf('/') + 1))"
                 :key="state"
             >{{state}}</option>
         </select>
         <p v-if="datacollection.datasets[2].data">Number of cases: {{ totalCases | formatNumber }}</p>
+        <p
+            v-if="regionsPopulation[stateSelected]"
+        >Population: {{ regionsPopulation[stateSelected] | formatNumber }}</p>
+        <p
+            v-if="regionsPopulation[stateSelected]"
+        >Incidence rate: {{ totalCases / regionsPopulation[stateSelected] | formatPercentage }}</p>
         <line-chart :chart-data="datacollection" :options="options"></line-chart>
     </div>
 </template>
@@ -55,7 +61,8 @@ export default {
             options: {},
             stateSelected: "us",
             worldSelected: "us",
-            stateList: require("../assets/data/state_list.json")
+            regionData: require("../assets/data/state_list.json"),
+            regionsPopulation: require("../assets/data/country_population.json")
         };
     },
     computed: {
@@ -66,11 +73,14 @@ export default {
             return this.datacollection.datasets[2].data.reduce(
                 (a, b) => Number(a) + Number(b)
             );
+        },
+        regionsName() {
+            return this.regionData.map(x => x.name).sort()
         }
     },
     mounted() {
         this.getData(this.stateSelected);
-        this.stateList = this.stateList.sort();
+        console.log(this.regionsPopulation)
     },
     methods: {
         getData() {
@@ -148,6 +158,10 @@ export default {
         formatNumber: function(value) {
             if (!value) return "";
             return numeral(value).format("0,0");
+        },
+        formatPercentage: function(value) {
+            if (!value) return "";
+            return numeral(value).format("0.000%");
         }
     }
 };
