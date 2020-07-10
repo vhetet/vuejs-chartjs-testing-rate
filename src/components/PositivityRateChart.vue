@@ -31,17 +31,18 @@
         </select>
         <select v-model="stateSelected" @change="getData()">
             <option
-                v-for="state in regionsName.filter(x => x.includes(`${worldSelected}/`)).map(x => x.slice(x.indexOf('/') + 1))"
+                v-for="state in regionsName.filter(x => x.includes(`${worldSelected}/`))"
                 :key="state"
-            >{{state}}</option>
+                :value="state"
+            >{{state.slice(state.indexOf('/') + 1)}}</option>
         </select>
         <p v-if="datacollection.datasets[2].data">Number of cases: {{ totalCases | formatNumber }}</p>
         <p
-            v-if="regionsPopulation[stateSelected]"
-        >Population: {{ regionsPopulation[stateSelected] | formatNumber }}</p>
+            v-if="regionData[stateSelected]"
+        >Population: {{ regionData[stateSelected] | formatNumber }}</p>
         <p
-            v-if="regionsPopulation[stateSelected]"
-        >Incidence rate: {{ totalCases / regionsPopulation[stateSelected] | formatPercentage }}</p>
+            v-if="datacollection.datasets[2].data && regionData[stateSelected]"
+        >Incidence rate: {{ totalCases/regionData[stateSelected] | formatPercentage }}</p>
         <line-chart :chart-data="datacollection" :options="options"></line-chart>
     </div>
 </template>
@@ -59,7 +60,7 @@ export default {
         return {
             datacollection: {},
             options: {},
-            stateSelected: "us",
+            stateSelected: "us/us",
             worldSelected: "us",
             regionData: require("../assets/data/state_list.json"),
             regionsPopulation: require("../assets/data/country_population.json")
@@ -67,7 +68,7 @@ export default {
     },
     computed: {
         dataPath() {
-            return `${this.worldSelected}/${this.stateSelected}`;
+            return `${this.stateSelected}`;
         },
         totalCases() {
             return this.datacollection.datasets[2].data.reduce(
@@ -75,12 +76,11 @@ export default {
             );
         },
         regionsName() {
-            return this.regionData.map(x => x.name).sort()
+            return Object.keys(this.regionData).sort();
         }
     },
     mounted() {
         this.getData(this.stateSelected);
-        console.log(this.regionsPopulation)
     },
     methods: {
         getData() {

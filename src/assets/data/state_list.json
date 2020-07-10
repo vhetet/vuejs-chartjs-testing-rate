@@ -1,1054 +1,265 @@
-[
-    {
-        "name": "us/us",
-        "population": 0
-    },
-    {
-        "name": "us/alabama",
-        "population": 4903185
-    },
-    {
-        "name": "us/alaska",
-        "population": 731545
-    },
-    {
-        "name": "us/american-samoa",
-        "population": 55641
-    },
-    {
-        "name": "us/arizona",
-        "population": 7278717
-    },
-    {
-        "name": "us/arkansas",
-        "population": 3017825
-    },
-    {
-        "name": "us/california",
-        "population": 39512223
-    },
-    {
-        "name": "us/colorado",
-        "population": 5758736
-    },
-    {
-        "name": "us/connecticut",
-        "population": 3565287
-    },
-    {
-        "name": "us/delaware",
-        "population": 973764
-    },
-    {
-        "name": "us/district-of-columbia",
-        "population": 705749
-    },
-    {
-        "name": "us/florida",
-        "population": 21477737
-    },
-    {
-        "name": "us/georgia",
-        "population": 10617423
-    },
-    {
-        "name": "us/guam",
-        "population": 165768
-    },
-    {
-        "name": "us/hawaii",
-        "population": 1415872
-    },
-    {
-        "name": "us/idaho",
-        "population": 1787065
-    },
-    {
-        "name": "us/illinois",
-        "population": 12671821
-    },
-    {
-        "name": "us/indiana",
-        "population": 6732219
-    },
-    {
-        "name": "us/iowa",
-        "population": 3155070
-    },
-    {
-        "name": "us/kansas",
-        "population": 2913314
-    },
-    {
-        "name": "us/kentucky",
-        "population": 4467673
-    },
-    {
-        "name": "us/louisiana",
-        "population": 4648794
-    },
-    {
-        "name": "us/maine",
-        "population": 1344212
-    },
-    {
-        "name": "us/maryland",
-        "population": 6045680
-    },
-    {
-        "name": "us/massachusetts",
-        "population": 6949503
-    },
-    {
-        "name": "us/michigan",
-        "population": 9986857
-    },
-    {
-        "name": "us/minnesota",
-        "population": 5639632
-    },
-    {
-        "name": "us/mississippi",
-        "population": 2976149
-    },
-    {
-        "name": "us/missouri",
-        "population": 6137428
-    },
-    {
-        "name": "us/montana",
-        "population": 1068778
-    },
-    {
-        "name": "us/nebraska",
-        "population": 1934408
-    },
-    {
-        "name": "us/nevada",
-        "population": 3080156
-    },
-    {
-        "name": "us/new-hampshire",
-        "population": 1359711
-    },
-    {
-        "name": "us/new-jersey",
-        "population": 8882190
-    },
-    {
-        "name": "us/new-mexico",
-        "population": 2096829
-    },
-    {
-        "name": "us/new-york",
-        "population": 19453561
-    },
-    {
-        "name": "us/north-carolina",
-        "population": 10488084
-    },
-    {
-        "name": "us/north-dakota",
-        "population": 762062
-    },
-    {
-        "name": "us/northern-mariana-islands",
-        "population": 56882
-    },
-    {
-        "name": "us/ohio",
-        "population": 11689100
-    },
-    {
-        "name": "us/oklahoma",
-        "population": 3956971
-    },
-    {
-        "name": "us/oregon",
-        "population": 4217737
-    },
-    {
-        "name": "us/pennsylvania",
-        "population": 12801989
-    },
-    {
-        "name": "us/puerto-rico",
-        "population": 3195153
-    },
-    {
-        "name": "us/rhode-island",
-        "population": 1059361
-    },
-    {
-        "name": "us/south-carolina",
-        "population": 5148714
-    },
-    {
-        "name": "us/south-dakota",
-        "population": 884659
-    },
-    {
-        "name": "us/tennessee",
-        "population": 6833174
-    },
-    {
-        "name": "us/texas",
-        "population": 28995881
-    },
-    {
-        "name": "us/us-virgin-islands",
-        "population": 104914
-    },
-    {
-        "name": "us/utah",
-        "population": 3205958
-    },
-    {
-        "name": "us/vermont",
-        "population": 623989
-    },
-    {
-        "name": "us/virginia",
-        "population": 8535519
-    },
-    {
-        "name": "us/washington",
-        "population": 7614893
-    },
-    {
-        "name": "us/west-virginia",
-        "population": 1792147
-    },
-    {
-        "name": "us/wisconsin",
-        "population": 5822434
-    },
-    {
-        "name": "us/wyoming",
-        "population": 578759
-    },
-    {
-        "name": "countries/Aruba",
-        "population": 0
-    },
-    {
-        "name": "countries/Afghanistan",
-        "population": 0
-    },
-    {
-        "name": "countries/Angola",
-        "population": 0
-    },
-    {
-        "name": "countries/Anguilla",
-        "population": 0
-    },
-    {
-        "name": "countries/Albania",
-        "population": 0
-    },
-    {
-        "name": "countries/Andorra",
-        "population": 0
-    },
-    {
-        "name": "countries/United Arab Emirates",
-        "population": 0
-    },
-    {
-        "name": "countries/Argentina",
-        "population": 0
-    },
-    {
-        "name": "countries/Armenia",
-        "population": 0
-    },
-    {
-        "name": "countries/Antigua and Barbuda",
-        "population": 0
-    },
-    {
-        "name": "countries/Australia",
-        "population": 0
-    },
-    {
-        "name": "countries/Austria",
-        "population": 0
-    },
-    {
-        "name": "countries/Azerbaijan",
-        "population": 0
-    },
-    {
-        "name": "countries/Burundi",
-        "population": 0
-    },
-    {
-        "name": "countries/Belgium",
-        "population": 0
-    },
-    {
-        "name": "countries/Benin",
-        "population": 0
-    },
-    {
-        "name": "countries/Bonaire Sint Eustatius and Saba",
-        "population": 0
-    },
-    {
-        "name": "countries/Burkina Faso",
-        "population": 0
-    },
-    {
-        "name": "countries/Bangladesh",
-        "population": 0
-    },
-    {
-        "name": "countries/Bulgaria",
-        "population": 0
-    },
-    {
-        "name": "countries/Bahrain",
-        "population": 0
-    },
-    {
-        "name": "countries/Bahamas",
-        "population": 0
-    },
-    {
-        "name": "countries/Bosnia and Herzegovina",
-        "population": 0
-    },
-    {
-        "name": "countries/Belarus",
-        "population": 0
-    },
-    {
-        "name": "countries/Belize",
-        "population": 0
-    },
-    {
-        "name": "countries/Bermuda",
-        "population": 0
-    },
-    {
-        "name": "countries/Bolivia",
-        "population": 0
-    },
-    {
-        "name": "countries/Brazil",
-        "population": 0
-    },
-    {
-        "name": "countries/Barbados",
-        "population": 0
-    },
-    {
-        "name": "countries/Brunei",
-        "population": 0
-    },
-    {
-        "name": "countries/Bhutan",
-        "population": 0
-    },
-    {
-        "name": "countries/Botswana",
-        "population": 0
-    },
-    {
-        "name": "countries/Central African Republic",
-        "population": 0
-    },
-    {
-        "name": "countries/Canada",
-        "population": 0
-    },
-    {
-        "name": "countries/Switzerland",
-        "population": 0
-    },
-    {
-        "name": "countries/Chile",
-        "population": 0
-    },
-    {
-        "name": "countries/China",
-        "population": 0
-    },
-    {
-        "name": "countries/Cote d'Ivoire",
-        "population": 0
-    },
-    {
-        "name": "countries/Cameroon",
-        "population": 0
-    },
-    {
-        "name": "countries/Democratic Republic of Congo",
-        "population": 0
-    },
-    {
-        "name": "countries/Congo",
-        "population": 0
-    },
-    {
-        "name": "countries/Colombia",
-        "population": 0
-    },
-    {
-        "name": "countries/Cape Verde",
-        "population": 0
-    },
-    {
-        "name": "countries/Costa Rica",
-        "population": 0
-    },
-    {
-        "name": "countries/Cuba",
-        "population": 0
-    },
-    {
-        "name": "countries/Curacao",
-        "population": 0
-    },
-    {
-        "name": "countries/Cayman Islands",
-        "population": 0
-    },
-    {
-        "name": "countries/Cyprus",
-        "population": 0
-    },
-    {
-        "name": "countries/Czech Republic",
-        "population": 0
-    },
-    {
-        "name": "countries/Germany",
-        "population": 0
-    },
-    {
-        "name": "countries/Djibouti",
-        "population": 0
-    },
-    {
-        "name": "countries/Dominica",
-        "population": 0
-    },
-    {
-        "name": "countries/Denmark",
-        "population": 0
-    },
-    {
-        "name": "countries/Dominican Republic",
-        "population": 0
-    },
-    {
-        "name": "countries/Algeria",
-        "population": 0
-    },
-    {
-        "name": "countries/Ecuador",
-        "population": 0
-    },
-    {
-        "name": "countries/Egypt",
-        "population": 0
-    },
-    {
-        "name": "countries/Eritrea",
-        "population": 0
-    },
-    {
-        "name": "countries/Spain",
-        "population": 0
-    },
-    {
-        "name": "countries/Estonia",
-        "population": 0
-    },
-    {
-        "name": "countries/Ethiopia",
-        "population": 0
-    },
-    {
-        "name": "countries/Finland",
-        "population": 0
-    },
-    {
-        "name": "countries/Fiji",
-        "population": 0
-    },
-    {
-        "name": "countries/Falkland Islands",
-        "population": 0
-    },
-    {
-        "name": "countries/France",
-        "population": 0
-    },
-    {
-        "name": "countries/Faeroe Islands",
-        "population": 0
-    },
-    {
-        "name": "countries/Gabon",
-        "population": 0
-    },
-    {
-        "name": "countries/United Kingdom",
-        "population": 0
-    },
-    {
-        "name": "countries/Georgia",
-        "population": 0
-    },
-    {
-        "name": "countries/Guernsey",
-        "population": 0
-    },
-    {
-        "name": "countries/Ghana",
-        "population": 0
-    },
-    {
-        "name": "countries/Gibraltar",
-        "population": 0
-    },
-    {
-        "name": "countries/Guinea",
-        "population": 0
-    },
-    {
-        "name": "countries/Gambia",
-        "population": 0
-    },
-    {
-        "name": "countries/Guinea-Bissau",
-        "population": 0
-    },
-    {
-        "name": "countries/Equatorial Guinea",
-        "population": 0
-    },
-    {
-        "name": "countries/Greece",
-        "population": 0
-    },
-    {
-        "name": "countries/Grenada",
-        "population": 0
-    },
-    {
-        "name": "countries/Greenland",
-        "population": 0
-    },
-    {
-        "name": "countries/Guatemala",
-        "population": 0
-    },
-    {
-        "name": "countries/Guam",
-        "population": 0
-    },
-    {
-        "name": "countries/Guyana",
-        "population": 0
-    },
-    {
-        "name": "countries/Hong Kong",
-        "population": 0
-    },
-    {
-        "name": "countries/Honduras",
-        "population": 0
-    },
-    {
-        "name": "countries/Croatia",
-        "population": 0
-    },
-    {
-        "name": "countries/Haiti",
-        "population": 0
-    },
-    {
-        "name": "countries/Hungary",
-        "population": 0
-    },
-    {
-        "name": "countries/Indonesia",
-        "population": 0
-    },
-    {
-        "name": "countries/Isle of Man",
-        "population": 0
-    },
-    {
-        "name": "countries/India",
-        "population": 0
-    },
-    {
-        "name": "countries/Ireland",
-        "population": 0
-    },
-    {
-        "name": "countries/Iran",
-        "population": 0
-    },
-    {
-        "name": "countries/Iraq",
-        "population": 0
-    },
-    {
-        "name": "countries/Iceland",
-        "population": 0
-    },
-    {
-        "name": "countries/Israel",
-        "population": 0
-    },
-    {
-        "name": "countries/Italy",
-        "population": 0
-    },
-    {
-        "name": "countries/Jamaica",
-        "population": 0
-    },
-    {
-        "name": "countries/Jersey",
-        "population": 0
-    },
-    {
-        "name": "countries/Jordan",
-        "population": 0
-    },
-    {
-        "name": "countries/Japan",
-        "population": 0
-    },
-    {
-        "name": "countries/Kazakhstan",
-        "population": 0
-    },
-    {
-        "name": "countries/Kenya",
-        "population": 0
-    },
-    {
-        "name": "countries/Kyrgyzstan",
-        "population": 0
-    },
-    {
-        "name": "countries/Cambodia",
-        "population": 0
-    },
-    {
-        "name": "countries/Saint Kitts and Nevis",
-        "population": 0
-    },
-    {
-        "name": "countries/South Korea",
-        "population": 0
-    },
-    {
-        "name": "countries/Kuwait",
-        "population": 0
-    },
-    {
-        "name": "countries/Laos",
-        "population": 0
-    },
-    {
-        "name": "countries/Lebanon",
-        "population": 0
-    },
-    {
-        "name": "countries/Liberia",
-        "population": 0
-    },
-    {
-        "name": "countries/Libya",
-        "population": 0
-    },
-    {
-        "name": "countries/Saint Lucia",
-        "population": 0
-    },
-    {
-        "name": "countries/Liechtenstein",
-        "population": 0
-    },
-    {
-        "name": "countries/Sri Lanka",
-        "population": 0
-    },
-    {
-        "name": "countries/Lithuania",
-        "population": 0
-    },
-    {
-        "name": "countries/Luxembourg",
-        "population": 0
-    },
-    {
-        "name": "countries/Latvia",
-        "population": 0
-    },
-    {
-        "name": "countries/Morocco",
-        "population": 0
-    },
-    {
-        "name": "countries/Monaco",
-        "population": 0
-    },
-    {
-        "name": "countries/Moldova",
-        "population": 0
-    },
-    {
-        "name": "countries/Madagascar",
-        "population": 0
-    },
-    {
-        "name": "countries/Maldives",
-        "population": 0
-    },
-    {
-        "name": "countries/Mexico",
-        "population": 0
-    },
-    {
-        "name": "countries/Macedonia",
-        "population": 0
-    },
-    {
-        "name": "countries/Mali",
-        "population": 0
-    },
-    {
-        "name": "countries/Malta",
-        "population": 0
-    },
-    {
-        "name": "countries/Myanmar",
-        "population": 0
-    },
-    {
-        "name": "countries/Montenegro",
-        "population": 0
-    },
-    {
-        "name": "countries/Mongolia",
-        "population": 0
-    },
-    {
-        "name": "countries/Northern Mariana Islands",
-        "population": 0
-    },
-    {
-        "name": "countries/Mozambique",
-        "population": 0
-    },
-    {
-        "name": "countries/Mauritania",
-        "population": 0
-    },
-    {
-        "name": "countries/Montserrat",
-        "population": 0
-    },
-    {
-        "name": "countries/Mauritius",
-        "population": 0
-    },
-    {
-        "name": "countries/Malawi",
-        "population": 0
-    },
-    {
-        "name": "countries/Malaysia",
-        "population": 0
-    },
-    {
-        "name": "countries/Namibia",
-        "population": 0
-    },
-    {
-        "name": "countries/New Caledonia",
-        "population": 0
-    },
-    {
-        "name": "countries/Niger",
-        "population": 0
-    },
-    {
-        "name": "countries/Nigeria",
-        "population": 0
-    },
-    {
-        "name": "countries/Nicaragua",
-        "population": 0
-    },
-    {
-        "name": "countries/Netherlands",
-        "population": 0
-    },
-    {
-        "name": "countries/Norway",
-        "population": 0
-    },
-    {
-        "name": "countries/Nepal",
-        "population": 0
-    },
-    {
-        "name": "countries/New Zealand",
-        "population": 0
-    },
-    {
-        "name": "countries/Oman",
-        "population": 0
-    },
-    {
-        "name": "countries/Pakistan",
-        "population": 0
-    },
-    {
-        "name": "countries/Panama",
-        "population": 0
-    },
-    {
-        "name": "countries/Peru",
-        "population": 0
-    },
-    {
-        "name": "countries/Philippines",
-        "population": 0
-    },
-    {
-        "name": "countries/Papua New Guinea",
-        "population": 0
-    },
-    {
-        "name": "countries/Poland",
-        "population": 0
-    },
-    {
-        "name": "countries/Puerto Rico",
-        "population": 0
-    },
-    {
-        "name": "countries/Portugal",
-        "population": 0
-    },
-    {
-        "name": "countries/Paraguay",
-        "population": 0
-    },
-    {
-        "name": "countries/Palestine",
-        "population": 0
-    },
-    {
-        "name": "countries/French Polynesia",
-        "population": 0
-    },
-    {
-        "name": "countries/Qatar",
-        "population": 0
-    },
-    {
-        "name": "countries/Kosovo",
-        "population": 0
-    },
-    {
-        "name": "countries/Romania",
-        "population": 0
-    },
-    {
-        "name": "countries/Russia",
-        "population": 0
-    },
-    {
-        "name": "countries/Rwanda",
-        "population": 0
-    },
-    {
-        "name": "countries/Saudi Arabia",
-        "population": 0
-    },
-    {
-        "name": "countries/Sudan",
-        "population": 0
-    },
-    {
-        "name": "countries/Senegal",
-        "population": 0
-    },
-    {
-        "name": "countries/Singapore",
-        "population": 0
-    },
-    {
-        "name": "countries/Sierra Leone",
-        "population": 0
-    },
-    {
-        "name": "countries/El Salvador",
-        "population": 0
-    },
-    {
-        "name": "countries/San Marino",
-        "population": 0
-    },
-    {
-        "name": "countries/Somalia",
-        "population": 0
-    },
-    {
-        "name": "countries/Serbia",
-        "population": 0
-    },
-    {
-        "name": "countries/South Sudan",
-        "population": 0
-    },
-    {
-        "name": "countries/Sao Tome and Principe",
-        "population": 0
-    },
-    {
-        "name": "countries/Suriname",
-        "population": 0
-    },
-    {
-        "name": "countries/Slovakia",
-        "population": 0
-    },
-    {
-        "name": "countries/Slovenia",
-        "population": 0
-    },
-    {
-        "name": "countries/Sweden",
-        "population": 0
-    },
-    {
-        "name": "countries/Swaziland",
-        "population": 0
-    },
-    {
-        "name": "countries/Sint Maarten (Dutch part)",
-        "population": 0
-    },
-    {
-        "name": "countries/Seychelles",
-        "population": 0
-    },
-    {
-        "name": "countries/Syria",
-        "population": 0
-    },
-    {
-        "name": "countries/Turks and Caicos Islands",
-        "population": 0
-    },
-    {
-        "name": "countries/Chad",
-        "population": 0
-    },
-    {
-        "name": "countries/Togo",
-        "population": 0
-    },
-    {
-        "name": "countries/Thailand",
-        "population": 0
-    },
-    {
-        "name": "countries/Timor",
-        "population": 0
-    },
-    {
-        "name": "countries/Trinidad and Tobago",
-        "population": 0
-    },
-    {
-        "name": "countries/Tunisia",
-        "population": 0
-    },
-    {
-        "name": "countries/Turkey",
-        "population": 0
-    },
-    {
-        "name": "countries/Taiwan",
-        "population": 0
-    },
-    {
-        "name": "countries/Tanzania",
-        "population": 0
-    },
-    {
-        "name": "countries/Uganda",
-        "population": 0
-    },
-    {
-        "name": "countries/Ukraine",
-        "population": 0
-    },
-    {
-        "name": "countries/Uruguay",
-        "population": 0
-    },
-    {
-        "name": "countries/United States",
-        "population": 0
-    },
-    {
-        "name": "countries/Uzbekistan",
-        "population": 0
-    },
-    {
-        "name": "countries/Vatican",
-        "population": 0
-    },
-    {
-        "name": "countries/Saint Vincent and the Grenadines",
-        "population": 0
-    },
-    {
-        "name": "countries/Venezuela",
-        "population": 0
-    },
-    {
-        "name": "countries/British Virgin Islands",
-        "population": 0
-    },
-    {
-        "name": "countries/United States Virgin Islands",
-        "population": 0
-    },
-    {
-        "name": "countries/Vietnam",
-        "population": 0
-    },
-    {
-        "name": "countries/Yemen",
-        "population": 0
-    },
-    {
-        "name": "countries/South Africa",
-        "population": 0
-    },
-    {
-        "name": "countries/Zambia",
-        "population": 0
-    },
-    {
-        "name": "countries/Zimbabwe",
-        "population": 0
-    }
-]
+{
+    "us/us": 0,
+    "us/alabama": 4903185,
+    "us/alaska": 731545,
+    "us/american-samoa": 55641,
+    "us/arizona": 7278717,
+    "us/arkansas": 3017825,
+    "us/california": 39512223,
+    "us/colorado": 5758736,
+    "us/connecticut": 3565287,
+    "us/delaware": 973764,
+    "us/district-of-columbia": 705749,
+    "us/florida": 21477737,
+    "us/georgia": 10617423,
+    "us/guam": 165768,
+    "us/hawaii": 1415872,
+    "us/idaho": 1787065,
+    "us/illinois": 12671821,
+    "us/indiana": 6732219,
+    "us/iowa": 3155070,
+    "us/kansas": 2913314,
+    "us/kentucky": 4467673,
+    "us/louisiana": 4648794,
+    "us/maine": 1344212,
+    "us/maryland": 6045680,
+    "us/massachusetts": 6949503,
+    "us/michigan": 9986857,
+    "us/minnesota": 5639632,
+    "us/mississippi": 2976149,
+    "us/missouri": 6137428,
+    "us/montana": 1068778,
+    "us/nebraska": 1934408,
+    "us/nevada": 3080156,
+    "us/new-hampshire": 1359711,
+    "us/new-jersey": 8882190,
+    "us/new-mexico": 2096829,
+    "us/new-york": 19453561,
+    "us/north-carolina": 10488084,
+    "us/north-dakota": 762062,
+    "us/northern-mariana-islands": 56882,
+    "us/ohio": 11689100,
+    "us/oklahoma": 3956971,
+    "us/oregon": 4217737,
+    "us/pennsylvania": 12801989,
+    "us/puerto-rico": 3195153,
+    "us/rhode-island": 1059361,
+    "us/south-carolina": 5148714,
+    "us/south-dakota": 884659,
+    "us/tennessee": 6833174,
+    "us/texas": 28995881,
+    "us/us-virgin-islands": 104914,
+    "us/utah": 3205958,
+    "us/vermont": 623989,
+    "us/virginia": 8535519,
+    "us/washington": 7614893,
+    "us/west-virginia": 1792147,
+    "us/wisconsin": 5822434,
+    "us/wyoming": 578759,
+    "countries/Aruba": 0,
+    "countries/Afghanistan": 0,
+    "countries/Angola": 0,
+    "countries/Anguilla": 0,
+    "countries/Albania": 0,
+    "countries/Andorra": 0,
+    "countries/United Arab Emirates": 0,
+    "countries/Argentina": 0,
+    "countries/Armenia": 0,
+    "countries/Antigua and Barbuda": 0,
+    "countries/Australia": 0,
+    "countries/Austria": 0,
+    "countries/Azerbaijan": 0,
+    "countries/Burundi": 0,
+    "countries/Belgium": 0,
+    "countries/Benin": 0,
+    "countries/Bonaire Sint Eustatius and Saba": 0,
+    "countries/Burkina Faso": 0,
+    "countries/Bangladesh": 0,
+    "countries/Bulgaria": 0,
+    "countries/Bahrain": 0,
+    "countries/Bahamas": 0,
+    "countries/Bosnia and Herzegovina": 0,
+    "countries/Belarus": 0,
+    "countries/Belize": 0,
+    "countries/Bermuda": 0,
+    "countries/Bolivia": 0,
+    "countries/Brazil": 0,
+    "countries/Barbados": 0,
+    "countries/Brunei": 0,
+    "countries/Bhutan": 0,
+    "countries/Botswana": 0,
+    "countries/Central African Republic": 0,
+    "countries/Canada": 0,
+    "countries/Switzerland": 0,
+    "countries/Chile": 0,
+    "countries/China": 0,
+    "countries/Cote d'Ivoire": 0,
+    "countries/Cameroon": 0,
+    "countries/Democratic Republic of Congo": 0,
+    "countries/Congo": 0,
+    "countries/Colombia": 0,
+    "countries/Cape Verde": 0,
+    "countries/Costa Rica": 0,
+    "countries/Cuba": 0,
+    "countries/Curacao": 0,
+    "countries/Cayman Islands": 0,
+    "countries/Cyprus": 0,
+    "countries/Czech Republic": 0,
+    "countries/Germany": 0,
+    "countries/Djibouti": 0,
+    "countries/Dominica": 0,
+    "countries/Denmark": 0,
+    "countries/Dominican Republic": 0,
+    "countries/Algeria": 0,
+    "countries/Ecuador": 0,
+    "countries/Egypt": 0,
+    "countries/Eritrea": 0,
+    "countries/Spain": 0,
+    "countries/Estonia": 0,
+    "countries/Ethiopia": 0,
+    "countries/Finland": 0,
+    "countries/Fiji": 0,
+    "countries/Falkland Islands": 0,
+    "countries/France": 0,
+    "countries/Faeroe Islands": 0,
+    "countries/Gabon": 0,
+    "countries/United Kingdom": 0,
+    "countries/Georgia": 0,
+    "countries/Guernsey": 0,
+    "countries/Ghana": 0,
+    "countries/Gibraltar": 0,
+    "countries/Guinea": 0,
+    "countries/Gambia": 0,
+    "countries/Guinea-Bissau": 0,
+    "countries/Equatorial Guinea": 0,
+    "countries/Greece": 0,
+    "countries/Grenada": 0,
+    "countries/Greenland": 0,
+    "countries/Guatemala": 0,
+    "countries/Guam": 0,
+    "countries/Guyana": 0,
+    "countries/Hong Kong": 0,
+    "countries/Honduras": 0,
+    "countries/Croatia": 0,
+    "countries/Haiti": 0,
+    "countries/Hungary": 0,
+    "countries/Indonesia": 0,
+    "countries/Isle of Man": 0,
+    "countries/India": 0,
+    "countries/Ireland": 0,
+    "countries/Iran": 0,
+    "countries/Iraq": 0,
+    "countries/Iceland": 0,
+    "countries/Israel": 0,
+    "countries/Italy": 0,
+    "countries/Jamaica": 0,
+    "countries/Jersey": 0,
+    "countries/Jordan": 0,
+    "countries/Japan": 0,
+    "countries/Kazakhstan": 0,
+    "countries/Kenya": 0,
+    "countries/Kyrgyzstan": 0,
+    "countries/Cambodia": 0,
+    "countries/Saint Kitts and Nevis": 0,
+    "countries/South Korea": 0,
+    "countries/Kuwait": 0,
+    "countries/Laos": 0,
+    "countries/Lebanon": 0,
+    "countries/Liberia": 0,
+    "countries/Libya": 0,
+    "countries/Saint Lucia": 0,
+    "countries/Liechtenstein": 0,
+    "countries/Sri Lanka": 0,
+    "countries/Lithuania": 0,
+    "countries/Luxembourg": 0,
+    "countries/Latvia": 0,
+    "countries/Morocco": 0,
+    "countries/Monaco": 0,
+    "countries/Moldova": 0,
+    "countries/Madagascar": 0,
+    "countries/Maldives": 0,
+    "countries/Mexico": 0,
+    "countries/Macedonia": 0,
+    "countries/Mali": 0,
+    "countries/Malta": 0,
+    "countries/Myanmar": 0,
+    "countries/Montenegro": 0,
+    "countries/Mongolia": 0,
+    "countries/Northern Mariana Islands": 0,
+    "countries/Mozambique": 0,
+    "countries/Mauritania": 0,
+    "countries/Montserrat": 0,
+    "countries/Mauritius": 0,
+    "countries/Malawi": 0,
+    "countries/Malaysia": 0,
+    "countries/Namibia": 0,
+    "countries/New Caledonia": 0,
+    "countries/Niger": 0,
+    "countries/Nigeria": 0,
+    "countries/Nicaragua": 0,
+    "countries/Netherlands": 0,
+    "countries/Norway": 0,
+    "countries/Nepal": 0,
+    "countries/New Zealand": 0,
+    "countries/Oman": 0,
+    "countries/Pakistan": 0,
+    "countries/Panama": 0,
+    "countries/Peru": 0,
+    "countries/Philippines": 0,
+    "countries/Papua New Guinea": 0,
+    "countries/Poland": 0,
+    "countries/Puerto Rico": 0,
+    "countries/Portugal": 0,
+    "countries/Paraguay": 0,
+    "countries/Palestine": 0,
+    "countries/French Polynesia": 0,
+    "countries/Qatar": 0,
+    "countries/Kosovo": 0,
+    "countries/Romania": 0,
+    "countries/Russia": 0,
+    "countries/Rwanda": 0,
+    "countries/Saudi Arabia": 0,
+    "countries/Sudan": 0,
+    "countries/Senegal": 0,
+    "countries/Singapore": 0,
+    "countries/Sierra Leone": 0,
+    "countries/El Salvador": 0,
+    "countries/San Marino": 0,
+    "countries/Somalia": 0,
+    "countries/Serbia": 0,
+    "countries/South Sudan": 0,
+    "countries/Sao Tome and Principe": 0,
+    "countries/Suriname": 0,
+    "countries/Slovakia": 0,
+    "countries/Slovenia": 0,
+    "countries/Sweden": 0,
+    "countries/Swaziland": 0,
+    "countries/Sint Maarten (Dutch part)": 0,
+    "countries/Seychelles": 0,
+    "countries/Syria": 0,
+    "countries/Turks and Caicos Islands": 0,
+    "countries/Chad": 0,
+    "countries/Togo": 0,
+    "countries/Thailand": 0,
+    "countries/Timor": 0,
+    "countries/Trinidad and Tobago": 0,
+    "countries/Tunisia": 0,
+    "countries/Turkey": 0,
+    "countries/Taiwan": 0,
+    "countries/Tanzania": 0,
+    "countries/Uganda": 0,
+    "countries/Ukraine": 0,
+    "countries/Uruguay": 0,
+    "countries/United States": 0,
+    "countries/Uzbekistan": 0,
+    "countries/Vatican": 0,
+    "countries/Saint Vincent and the Grenadines": 0,
+    "countries/Venezuela": 0,
+    "countries/British Virgin Islands": 0,
+    "countries/United States Virgin Islands": 0,
+    "countries/Vietnam": 0,
+    "countries/Yemen": 0,
+    "countries/South Africa": 0,
+    "countries/Zambia": 0,
+    "countries/Zimbabwe": 0
+}
