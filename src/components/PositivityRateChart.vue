@@ -62,8 +62,7 @@ export default {
             options: {},
             stateSelected: "us/us",
             worldSelected: "us",
-            regionData: require("../assets/data/state_list.json"),
-            regionsPopulation: require("../assets/data/country_population.json")
+            regionData: require("../assets/data/state_list.json")
         };
     },
     computed: {
