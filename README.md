@@ -5,20 +5,16 @@ The app is currently deployed [here](https://vue-chartjs-experimentation.herokua
 ## TODO
 
 * add details in the readme
-* create a dashboard? 
-* clean the data?
-* improve the chart?
-* clean project and remove any unused dependency
+* create a dashboard? ==> in the data repo add a step to the daily script to generate a summary/table of the data. This could be use to render a table to rank countries and put link in there so that there is another way than the dropdown to select countries
+* improve the chart? ==> allow selection/deselection of the data you want to see, limit the chart to a certain period
+* clean project and remove any unused dependency. Check the bundle size/prod build
 * enable es6 for the scripts so that I can replace the require by imports
-* create a batch job to update the data daily
-* optimize storage of the json files. Make sure it's not loading all of them imn the first place. And check the bundle size
-* Hide the data that isn't usable
 * improve the contry/state selection selection
 * do more charts?
 * add tests!!! (the focus was to build something but if I expand this project I will unit test it)
 * ~~investigate the other api available to see if I can find better data~~ ==> the data from `our world in data` is good
-* add the incidence rate (using this [json](https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json))
-* use vuex to manage data and store the different search. Use the store data to render a table with the data from the contry looked up. The table should be sortable (I could use buefy for that)
+* ~~add the incidence rate (using this [json](https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json))~~
+* ~~use vuex to manage data and store the different search.~~ Use the store data to render a table with the data from the contry looked up. The table should be sortable (I could use buefy for that)
 
 ## Project setup
 ```
