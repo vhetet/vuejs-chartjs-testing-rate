@@ -36,14 +36,19 @@
                 :value="state"
             >{{state.slice(state.indexOf('/') + 1)}}</option>
         </select>
-        <p v-if="datacollection.datasets[2].data">Number of cases: {{ totalCases | formatNumber }}</p>
+        <p v-if="dataCollection.datasets[2].data">Number of cases: {{ totalCases | formatNumber }}</p>
         <p
             v-if="regionData[stateSelected]"
         >Population: {{ regionData[stateSelected] | formatNumber }}</p>
         <p
-            v-if="datacollection.datasets[2].data && regionData[stateSelected]"
+            v-if="dataCollection.datasets[2].data && regionData[stateSelected]"
         >Incidence rate: {{ totalCases/regionData[stateSelected] | formatPercentage }}</p>
-        <line-chart :chart-data="datacollection" :options="options"></line-chart>
+        <line-chart :chart-data="dataCollection" :options="options"></line-chart>
+        <select v-model="chartOption" @change="fillData()">
+            <option value="7">7 days</option>
+            <option value="30">30 days</option>
+            <option value="120">120 days</option>
+        </select>
     </div>
 </template>
 
@@ -58,11 +63,13 @@ export default {
     },
     data() {
         return {
-            datacollection: {},
+            dataCollection: {},
             options: {},
             stateSelected: "us/us",
             worldSelected: "us",
-            regionData: require("../assets/data/state_list.json")
+            chartOption: '30',
+            regionData: require("../assets/data/state_list.json"),
+            cleanedData: []
         };
     },
     computed: {
@@ -76,11 +83,6 @@ export default {
         },
         regionsName() {
             return Object.keys(this.regionData).sort();
-        },
-        cleanedData() {
-            return this.$store.state.chartData.slice(
-                this.$store.state.chartData.findIndex(x => x.newDailyCase > 10)
-            );
         }
     },
     mounted() {
@@ -98,7 +100,8 @@ export default {
                 });
         },
         fillData() {
-            (this.datacollection = {
+            this.cleanedData = this.$store.state.chartData.slice(this.$store.state.chartData.length - this.chartOption);
+            (this.dataCollection = {
                 labels: this.cleanedData.map(x => x.date),
                 datasets: [
                     {
