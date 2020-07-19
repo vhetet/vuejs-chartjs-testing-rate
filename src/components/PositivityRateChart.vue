@@ -70,12 +70,17 @@ export default {
             return `${this.stateSelected}`;
         },
         totalCases() {
-            return this.datacollection.datasets[2].data.reduce(
+            return this.$store.state.chartData.map(x => x.newDailyCase).reduce(
                 (a, b) => Number(a) + Number(b)
             );
         },
         regionsName() {
             return Object.keys(this.regionData).sort();
+        },
+        cleanedData() {
+            return this.$store.state.chartData.slice(
+                this.$store.state.chartData.findIndex(x => x.newDailyCase > 10)
+            );
         }
     },
     mounted() {
@@ -88,23 +93,20 @@ export default {
                     `https://raw.githubusercontent.com/vhetet/vuejs-testing-rate-data/master/data/${this.dataPath}_covid_test_daily_positive_rate.json`
                 )
                 .then(res => {
-                    const data = res.data.slice(
-                        res.data.findIndex(x => x.newDailyCase > 10)
-                    );
-                    this.$store.commit("changeChartData", data);
+                    this.$store.commit("changeChartData", res.data);
                     this.fillData();
                 });
         },
         fillData() {
             (this.datacollection = {
-                labels: this.$store.state.chartData.map(x => x.date),
+                labels: this.cleanedData.map(x => x.date),
                 datasets: [
                     {
                         label: "daily positive rate (in %)",
                         yAxisID: "a",
                         borderColor: "rgba(255, 111, 111)",
                         backgroundColor: "rgba(255, 111, 111, 0.3)",
-                        data: this.$store.state.chartData.map(
+                        data: this.cleanedData.map(
                             x => x.dailyPositiveCasePercentage
                         )
                     },
@@ -113,44 +115,44 @@ export default {
                         yAxisID: "b",
                         borderColor: "rgba(100, 111, 255)",
                         backgroundColor: "rgba(100, 111, 255, 0)",
-                        data: this.$store.state.chartData.map(x => x.dailyTest)
+                        data: this.cleanedData.map(x => x.dailyTest)
                     },
                     {
                         label: "Number of case",
                         yAxisID: "b",
                         borderColor: "rgba(63, 191, 63)",
                         backgroundColor: "rgba(63, 191, 63, 0)",
-                        data: this.$store.state.chartData.map(
+                        data: this.cleanedData.map(
                             x => x.newDailyCase
                         )
                     }
                 ]
             }),
-                (this.options = {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        yAxes: [
-                            {
-                                id: "a",
-                                type: "linear",
-                                position: "left",
-                                ticks: {
-                                    max: 100,
-                                    min: 0
-                                }
-                            },
-                            {
-                                id: "b",
-                                type: "linear",
-                                position: "right",
-                                ticks: {
-                                    min: 0
-                                }
+            (this.options = {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [
+                        {
+                            id: "a",
+                            type: "linear",
+                            position: "left",
+                            ticks: {
+                                max: 100,
+                                min: 0
                             }
-                        ]
-                    }
-                });
+                        },
+                        {
+                            id: "b",
+                            type: "linear",
+                            position: "right",
+                            ticks: {
+                                min: 0
+                            }
+                        }
+                    ]
+                }
+            });
         }
     },
     filters: {
