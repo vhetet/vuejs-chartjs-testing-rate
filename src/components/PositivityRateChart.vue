@@ -92,7 +92,7 @@ export default {
         getData() {
             axios
                 .get(
-                    `https://raw.githubusercontent.com/vhetet/vuejs-testing-rate-data/master/data/${this.dataPath}_covid_test_daily_positive_rate.json`
+                    `https://raw.githubusercontent.com/vhetet/vuejs-testing-rate-data/valid-data/data/${this.dataPath}_covid_test_daily_positive_rate.json`
                 )
                 .then(res => {
                     this.$store.commit("changeChartData", res.data);
